@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="11" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2244" started-at="2021-05-23T07:31:36 EET" finished-at="2021-05-23T07:31:39 EET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2244" started-at="2021-05-23T07:31:36 EET" finished-at="2021-05-23T07:31:39 EET">
+      <class name="tests.CheckoutOverviewTest">
+        <test-method status="PASS" signature="startDriver(java.lang.String)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="startDriver" is-config="true" duration-ms="3015" started-at="2021-05-23T07:31:33 EET" finished-at="2021-05-23T07:31:36 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method status="PASS" signature="SuccessLogin()[pri:1, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="SuccessLogin" duration-ms="546" started-at="2021-05-23T07:31:36 EET" finished-at="2021-05-23T07:31:37 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SuccessLogin -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:37 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SuccessLogin status=SUCCESS method=CheckoutOverviewTest.SuccessLogin()[pri:1, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="AddItemUpdateCartbadge()[pri:2, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="AddItemUpdateCartbadge" duration-ms="234" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:37 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddItemUpdateCartbadge -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:37 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddItemUpdateCartbadge status=SUCCESS method=CheckoutOverviewTest.AddItemUpdateCartbadge()[pri:2, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="OpenCartPage()[pri:3, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="OpenCartPage" duration-ms="120" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:37 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenCartPage -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:37 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OpenCartPage status=SUCCESS method=CheckoutOverviewTest.OpenCartPage()[pri:3, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="ProceedToCheckoutInfo()[pri:4, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="ProceedToCheckoutInfo" duration-ms="102" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:37 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProceedToCheckoutInfo -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:37 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ProceedToCheckoutInfo status=SUCCESS method=CheckoutOverviewTest.ProceedToCheckoutInfo()[pri:4, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="ProceedToCheckoutOverview()[pri:5, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="ProceedToCheckoutOverview" duration-ms="559" started-at="2021-05-23T07:31:37 EET" finished-at="2021-05-23T07:31:38 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProceedToCheckoutOverview -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ProceedToCheckoutOverview status=SUCCESS method=CheckoutOverviewTest.ProceedToCheckoutOverview()[pri:5, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="CheckPaymentInfo()[pri:6, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="CheckPaymentInfo" duration-ms="40" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckPaymentInfo -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CheckPaymentInfo status=SUCCESS method=CheckoutOverviewTest.CheckPaymentInfo()[pri:6, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="CheckShippingInfo()[pri:7, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="CheckShippingInfo" duration-ms="28" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckShippingInfo -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="0" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CheckShippingInfo status=SUCCESS method=CheckoutOverviewTest.CheckShippingInfo()[pri:7, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="CheckTax()[pri:9, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="CheckTax" duration-ms="28" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckTax -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CheckTax status=SUCCESS method=CheckoutOverviewTest.CheckTax()[pri:9, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="CheckCancelingCheckout()[pri:10, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="CheckCancelingCheckout" duration-ms="103" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckCancelingCheckout -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:38 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CheckCancelingCheckout status=SUCCESS method=CheckoutOverviewTest.CheckCancelingCheckout()[pri:10, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="CheckFinishCheckout()[pri:11, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="CheckFinishCheckout" duration-ms="409" started-at="2021-05-23T07:31:38 EET" finished-at="2021-05-23T07:31:39 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckFinishCheckout -->
+        <test-method status="PASS" signature="screenshotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="screenshotOnFailure" is-config="true" duration-ms="1" started-at="2021-05-23T07:31:39 EET" finished-at="2021-05-23T07:31:39 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CheckFinishCheckout status=SUCCESS method=CheckoutOverviewTest.CheckFinishCheckout()[pri:11, instance:tests.CheckoutOverviewTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotOnFailure -->
+        <test-method status="PASS" signature="stopDriver()[pri:0, instance:tests.CheckoutOverviewTest@1a8a8f7c]" name="stopDriver" is-config="true" duration-ms="743" started-at="2021-05-23T07:31:39 EET" finished-at="2021-05-23T07:31:39 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDriver -->
+      </class> <!-- tests.CheckoutOverviewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

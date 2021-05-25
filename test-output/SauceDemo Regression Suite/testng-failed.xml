@@ -4,13 +4,16 @@
   <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Regression Test(failed)">
     <classes>
-      <class name="tests.CartPageTest">
+      <class name="tests.CheckoutInfoTest">
         <methods>
           <include name="startDriver"/>
-          <include name="SuccessLogin"/>
+          <include name="FirstNameISRequired"/>
           <include name="stopDriver"/>
+          <include name="CheckCancelChkoutInfo"/>
+          <include name="screenshotOnFailure"/>
+          <include name="LastNameISRequired"/>
         </methods>
-      </class> <!-- tests.CartPageTest -->
+      </class> <!-- tests.CheckoutInfoTest -->
     </classes>
   </test> <!-- Regression Test(failed) -->
 </suite> <!-- Failed suite [SauceDemo Regression Suite] -->

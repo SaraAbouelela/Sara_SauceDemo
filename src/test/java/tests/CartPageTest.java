@@ -1,9 +1,5 @@
 package tests;
 
-import static org.testng.Assert.assertEquals;
-
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -21,10 +17,11 @@ public class CartPageTest extends TestBase
 	CartPage cartPage;
 	 WebElement Item ; 
 	@Test(priority = 1)
-	public void SuccessLogin() 
+	public void SuccessLogin() throws InterruptedException
 	{		
 		LogPage = new UserLoginPage(driver);
-		LogPage.ClearTxt();
+		driver.navigate().refresh();
+		
 		LogPage.userLogin("standard_user" , "secret_sauce");
 		Assert.assertTrue("https://www.saucedemo.com/inventory.html".equals(driver.getCurrentUrl()));
 	}

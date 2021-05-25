@@ -6,6 +6,8 @@
 		
 			<class name="tests.UserLoginTest" />
 			<class name="tests.CartPageTest" />
+			<class name="tests.CheckoutInfoTest" />
+			<class name="tests.CheckoutOverviewTest" />
 	
 		
 		</classes>

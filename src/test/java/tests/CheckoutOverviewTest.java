@@ -22,7 +22,7 @@ public class CheckoutOverviewTest extends TestBase
 	CheckoutOverviewPage ChkOutOverview;
 	String ExpTotal , ActTotal;
 	 WebElement Item ; 
-
+/* Uncomment in case of stand alone execution 
 		@Test(priority = 1)
 		public void SuccessLogin() 
 		{		
@@ -65,18 +65,21 @@ public class CheckoutOverviewTest extends TestBase
 			System.out.println("The checkout info Page opened successfully ");
 		}
 		
+		
 		@Test ( priority = 5)
 		public void ProceedToCheckoutOverview()
-		{
+		{ 	
 			ChkOutInfo = new CheckoutInfoPage(driver);
 			ChkOutInfo.SetFirstName("mohamed");
 			ChkOutInfo.SetLastName("123");
 			ChkOutInfo.SetPostalCode("123");
+			
 			ChkOutInfo.ContinueToOverview();
-
+			
 			Assert.assertTrue(driver.getCurrentUrl().equals("https://www.saucedemo.com/checkout-step-two.html"));
 		}
-		
+		*/
+	 
 		@Test ( priority = 6)
 		public void CheckPaymentInfo()
 		{

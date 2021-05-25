@@ -22,11 +22,13 @@ public class CheckoutInfoTest extends TestBase
 	CheckoutInfoPage ChkOutInfo;
 	 WebElement Item ; 
 
-		@Test(priority = 1)
+		/*Uncomment in case of stand alone execution 
+		 @Test(priority = 1)
 		public void SuccessLogin() 
 		{		
 			LogPage = new UserLoginPage(driver);
-			LogPage.ClearTxt();
+			driver.navigate().refresh();
+			//LogPage.ClearTxt();
 			LogPage.userLogin("standard_user" , "secret_sauce");
 			Assert.assertTrue("https://www.saucedemo.com/inventory.html".equals(driver.getCurrentUrl()));
 		}
@@ -54,13 +56,13 @@ public class CheckoutInfoTest extends TestBase
 			System.out.println("The cart Page opened successfully ");
 
 		}
-	 
+	 */
 	@Test ( priority = 4)
 	public void FirstNameISRequired()
 	{
-		// Click on Checkout
-		cartPage = new CartPage(driver);
-		cartPage.ProceedToCheckOut();
+		// Click on Checkout in case of running this class stand alone 
+		//cartPage = new CartPage(driver);
+		//cartPage.ProceedToCheckOut();
 		
 		ChkOutInfo = new CheckoutInfoPage(driver);
 		//Leave FirstNAme Empty 

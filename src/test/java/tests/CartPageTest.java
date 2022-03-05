@@ -1,19 +1,23 @@
 package tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.CartPage;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CartPageTest extends TestBase
 {
 	CartPage cartPage;
 
 	 @Test
-	public void navigateToSearchURL()
-	 {
+	public void navigateToSearchURL() throws InterruptedException {
 		 driver.navigate().to("https://www.autohero.com/de/search/");
 		 driver.findElement(By.xpath("/html/body/div[3]/div/form/div[2]/button[2]")).click();
 		 driver.findElement(By.className("label___2A7vZ")).click();
@@ -25,13 +29,44 @@ public class CartPageTest extends TestBase
 		 Select maxMileage = new Select(kilometerDDL);
 		 maxMileage.selectByVisibleText("25.000 km");
 		 driver.findElement(By.id("basicFilter")).click();
-		 driver.manage().window().setSize(60,60);
+		 JavascriptExecutor JS;
+		 JS = (JavascriptExecutor) driver;
+		 Thread.sleep(5000);
+		 java.util.List<WebElement> Items = driver
+				 .findElements(By.cssSelector("li.specItem___2u4I4:nth-of-type(3)"));
+//				 .findElements(By.cssSelector("h2.title___1TYYE.adTitle___VxmTf"));
 
+		 String regex="([0-9]+[.][0-9]+)";
+		 Pattern pattern=Pattern.compile(regex);
+		 Matcher matcher;
 
+		 for (WebElement i:Items
+		 ) {
+			  matcher=pattern.matcher(i.getText());
+			 while(matcher.find())
+			 {
+				 System.out.println(matcher.group());
+				 Assert.assertTrue(Float.parseFloat(matcher.group())<25);
+			 }
+		 }
 
+		 WebElement ItemScroll = Items.get(Items.size()-1);
+		 JS.executeScript("arguments[0].scrollIntoView();", ItemScroll);
+		 Thread.sleep(10000);
+		 java.util.List<WebElement> Updated = driver
+				 .findElements(By.cssSelector("li.specItem___2u4I4:nth-of-type(3)"));
 
-
-
+//				 .findElements(By.cssSelector("h2.title___1TYYE.adTitle___VxmTf"));
+		 for (WebElement i:Updated
+		 ) {
+			 matcher=pattern.matcher(i.getText());
+			 while(matcher.find())
+			 {
+				 System.out.println(matcher.group());
+				 Assert.assertTrue(Float.parseFloat(matcher.group())<25);
+			 }
+//			 System.out.println(i.getText().replaceAll("[^0-9]", ""));
+		 }
 	 }
 
 //	@Test(priority = 1)

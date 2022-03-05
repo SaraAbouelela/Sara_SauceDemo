@@ -2,6 +2,7 @@ package tests;
 
 import java.util.concurrent.TimeUnit;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,7 +18,7 @@ import utilities.Helper;
 
 public class TestBase 
 {
-
+	WebDriverManager driverManager;
 	public static WebDriver driver;
 	PageBase PageBaseObj;
 
@@ -31,23 +32,23 @@ public class TestBase
 		if (browserName.equalsIgnoreCase("chrome")) 
 		{
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-
 		}
 		else if (browserName.equalsIgnoreCase("firefox"))
 		{
 			System.setProperty("webdriver.firefox.driver",System.getProperty("user.dir")+"\\Drivers\\geckodriver.exe");
+			driverManager.setup();
 			driver = new FirefoxDriver();
 		}
-		driver.navigate().to("https://www.saucedemo.com");
+//		driver.navigate().to("https://www.saucedemo.com");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 	}
 
 	@AfterSuite
-	public void stopDriver () 
-	{
-		driver.quit();
+	public void stopDriver (){
+//	driver.quit();
 	}
 
 	

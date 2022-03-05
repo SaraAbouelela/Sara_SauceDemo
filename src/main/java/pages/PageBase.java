@@ -11,10 +11,6 @@ public class PageBase {
 	//create driver to deal with my page elements
 	protected WebDriver driver;
 
-	public static JavascriptExecutor jse;
-	public Select select;
-	public Actions action;
-
 	//create constructor
 	public PageBase(WebDriver driver) 
 	{

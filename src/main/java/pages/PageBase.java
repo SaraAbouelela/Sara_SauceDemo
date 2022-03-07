@@ -12,13 +12,13 @@ public class PageBase {
 	protected WebDriver driver;
 
 	//create constructor
-	public PageBase(WebDriver driver) 
+	public PageBase(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
 
-	public void ClearTxt (WebElement elem) 
+	public void navigateToURL (String URL)
 	{
-		elem.clear();
+		driver.navigate().to(URL);
 	}
 }

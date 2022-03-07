@@ -186,3 +186,4 @@ allure-results/
 !/PATH/TO/firstoutput.log
 !/logs/firstoutput.log
 /target/
+/test-output/

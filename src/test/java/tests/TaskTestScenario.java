@@ -7,17 +7,22 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.CartPage;
+import pages.TaskPageScenario;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CartPageTest extends TestBase
+public class TaskTestScenario extends TestBase
 {
-	CartPage cartPage;
+	TaskPageScenario taskPageScenario;
 
 	 @Test
 	public void navigateToSearchURL() throws InterruptedException {
+         String regex="([0-9]+[.][0-9]+)";
+         Pattern pattern=Pattern.compile(regex);
+         Matcher matcher;
+
 		 driver.navigate().to("https://www.autohero.com/de/search/");
 		 driver.findElement(By.xpath("/html/body/div[3]/div/form/div[2]/button[2]")).click();
 		 driver.findElement(By.className("label___2A7vZ")).click();
@@ -29,16 +34,15 @@ public class CartPageTest extends TestBase
 		 Select maxMileage = new Select(kilometerDDL);
 		 maxMileage.selectByVisibleText("25.000 km");
 		 driver.findElement(By.id("basicFilter")).click();
+
+
 		 JavascriptExecutor JS;
 		 JS = (JavascriptExecutor) driver;
+
 		 Thread.sleep(5000);
-		 java.util.List<WebElement> Items = driver
+		 List<WebElement> Items = driver
 				 .findElements(By.cssSelector("li.specItem___2u4I4:nth-of-type(3)"));
 //				 .findElements(By.cssSelector("h2.title___1TYYE.adTitle___VxmTf"));
-
-		 String regex="([0-9]+[.][0-9]+)";
-		 Pattern pattern=Pattern.compile(regex);
-		 Matcher matcher;
 
 		 for (WebElement i:Items
 		 ) {
@@ -49,10 +53,9 @@ public class CartPageTest extends TestBase
 				 Assert.assertTrue(Float.parseFloat(matcher.group())<25);
 			 }
 		 }
-
-		 WebElement ItemScroll = Items.get(Items.size()-1);
+         WebElement ItemScroll = Items.get(Items.size()-1);
 		 JS.executeScript("arguments[0].scrollIntoView();", ItemScroll);
-		 Thread.sleep(10000);
+		 Thread.sleep(3000);
 		 java.util.List<WebElement> Updated = driver
 				 .findElements(By.cssSelector("li.specItem___2u4I4:nth-of-type(3)"));
 
@@ -65,7 +68,6 @@ public class CartPageTest extends TestBase
 				 System.out.println(matcher.group());
 				 Assert.assertTrue(Float.parseFloat(matcher.group())<25);
 			 }
-//			 System.out.println(i.getText().replaceAll("[^0-9]", ""));
 		 }
 	 }
 
